@@ -6,7 +6,7 @@
 #    By: gvillat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 12:31:10 by gvillat           #+#    #+#              #
-#    Updated: 2015/12/03 20:40:41 by gvillat          ###   ########.fr        #
+#    Updated: 2016/06/06 16:56:24 by gvillat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,13 +79,14 @@ SRC=ft_memset.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
-	ft_lstpush.c 
+	ft_lstpush.c \
+	get_next_line.c
 
 OBJ=$(SRC:.c=.o)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(SRC)
-	ar rc	$(NAME) $(OBJ)
+	@$(CC) $(CFLAGS) -c $(SRC)
+	@ar rc	$(NAME) $(OBJ)
 
 all: $(NAME)
 
