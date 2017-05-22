@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvillat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:55:49 by gvillat           #+#    #+#             */
-/*   Updated: 2016/09/26 17:40:14 by gvillat          ###   ########.fr       */
+/*   Created: 2016/10/24 18:11:06 by gvillat           #+#    #+#             */
+/*   Updated: 2016/10/24 18:11:07 by gvillat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_isdigit(int c)
+size_t		ft_wstrlen(wchar_t *ws)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
+	size_t	len;
+
+	len = 0;
+	if (!ws)
 		return (0);
+	while (*(ws++))
+		len++;
+	return (len);
 }

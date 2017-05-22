@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlower.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvillat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:55:49 by gvillat           #+#    #+#             */
-/*   Updated: 2016/09/26 17:40:14 by gvillat          ###   ########.fr       */
+/*   Created: 2016/09/27 17:57:22 by gvillat           #+#    #+#             */
+/*   Updated: 2016/09/27 17:57:23 by gvillat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_isdigit(int c)
+void	*ft_strlower(char *s)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] = ft_tolower(s[i]);
+		i++;
+	}
+	return (s);
 }

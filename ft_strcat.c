@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "stdio.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

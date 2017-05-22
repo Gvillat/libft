@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   fpf_display.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvillat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:55:49 by gvillat           #+#    #+#             */
-/*   Updated: 2016/09/26 17:40:14 by gvillat          ###   ########.fr       */
+/*   Created: 2016/09/27 17:35:28 by gvillat           #+#    #+#             */
+/*   Updated: 2016/09/27 17:35:30 by gvillat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/fpf_printf.h"
 
-int	ft_isdigit(int c)
+void	fpf_display(PF *argument)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	argument->ret += write(FD, &g_buff, g_i);
+	fpf_init_buff();
+}
+
+void	fpf_buf(char c, PF *argument)
+{
+	g_buff[g_i] = c;
+	g_i++;
+	if (g_i == BUFF_MAX)
+		fpf_display(argument);
+}
+
+void	*fpf_buff(char *str, PF *argument)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		fpf_buf(str[i++], argument);
+	return (NULL);
 }
