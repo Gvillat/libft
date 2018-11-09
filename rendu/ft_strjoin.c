@@ -16,6 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *str;
 
+	if (!(char*)s1 || !(char*)s2)
+		return (NULL);
 	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (NULL);
 	ft_strcat(str, s1);

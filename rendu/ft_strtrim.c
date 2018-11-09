@@ -18,7 +18,10 @@ char	*ft_strtrim(char const *s)
 	int					end;
 
 	start = 0;
-	end = (int)ft_strlen(s) - 1;
+	if (s)
+		end = (int)ft_strlen(s) - 1;
+	else
+		return (NULL);
 	while ((s[start] == ' ' || s[start] == '\t' || s[start] == '\n') &&
 			s[start])
 		start++;
