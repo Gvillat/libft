@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fpf_printf.h"
+#include "fpf_printf.h"
 
 static uintmax_t		fpf_unsigned_cast(PF *argument, va_list ap)
 {

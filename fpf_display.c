@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fpf_printf.h"
+#include "fpf_printf.h"
 
 void	fpf_display(PF *argument)
 {

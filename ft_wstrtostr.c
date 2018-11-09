@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-#include "../includes/fpf_printf.h"
+#include "libft.h"
+#include "fpf_printf.h"
 
 int		ft_putwchar_in_char(wchar_t wchar, char *fresh, int i)
 {

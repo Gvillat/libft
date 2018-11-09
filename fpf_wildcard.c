@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fpf_printf.h"
+#include "fpf_printf.h"
 
 int			fpf_wildcard(PF *argument, va_list ap, int i)
 {

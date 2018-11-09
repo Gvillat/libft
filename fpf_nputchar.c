@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fpf_printf.h"
+#include "fpf_printf.h"
 
 void		fpf_nputchar(char c, ssize_t n, PF *argument)
 {

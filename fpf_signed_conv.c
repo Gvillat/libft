@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fpf_printf.h"
+#include "fpf_printf.h"
 
 static intmax_t		fpf_signed_cast(PF *argument, va_list ap)
 {
