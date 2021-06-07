@@ -19,7 +19,7 @@ void			ft_display(PF *argument)
 	ft_init_buff();
 }
 
-static u_int8_t	wstring_handler(PF *argument, va_list ap)
+static u_int64_t	wstring_handler(PF *argument, va_list ap)
 {
 	ssize_t len;
 
@@ -36,7 +36,7 @@ static u_int8_t	wstring_handler(PF *argument, va_list ap)
 	return (ft_print_str(argument));
 }
 
-u_int8_t		string_handler(PF *argument, va_list ap)
+u_int64_t		string_handler(PF *argument, va_list ap)
 {
 	ssize_t len;
 	char	*tmp;
@@ -57,7 +57,7 @@ u_int8_t		string_handler(PF *argument, va_list ap)
 	return (ft_print_str(argument));
 }
 
-u_int8_t		ft_print_str(PF *argument)
+u_int64_t		ft_print_str(PF *argument)
 {
 	ssize_t		len;
 	ssize_t		padding;

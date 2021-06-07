@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-u_int8_t		ft_arg_nospe(PF *argument, va_list ap)
+u_int64_t		ft_arg_nospe(PF *argument, va_list ap)
 {
 	char	c[2];
 
@@ -20,10 +20,10 @@ u_int8_t		ft_arg_nospe(PF *argument, va_list ap)
 	c[1] = '\0';
 	argument->arg = c;
 	ft_print_character(argument);
-	return ((u_int8_t)ap);
+	return ((u_int64_t)ap);
 }
 
-static u_int8_t	wchar_handler(va_list ap, PF *argument)
+static u_int64_t	wchar_handler(va_list ap, PF *argument)
 {
 	wint_t	c;
 
@@ -45,7 +45,7 @@ static u_int8_t	wchar_handler(va_list ap, PF *argument)
 	return (0);
 }
 
-u_int8_t		character_handler(PF *argument, va_list ap)
+u_int64_t		character_handler(PF *argument, va_list ap)
 {
 	char	c[2];
 

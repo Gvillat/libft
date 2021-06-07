@@ -34,7 +34,7 @@ static u_int64_t	unsigned_cast(PF *argument, va_list ap)
 	return (n);
 }
 
-static u_int8_t		unsigned_helper(PF *argument)
+static u_int64_t		unsigned_helper(PF *argument)
 {
 	ssize_t				len;
 	int					nullstr;
@@ -56,7 +56,7 @@ static u_int8_t		unsigned_helper(PF *argument)
 	return (ft_print_number(argument, ""));
 }
 
-u_int8_t			unsigned_handler(PF *argument, va_list ap)
+u_int64_t			unsigned_handler(PF *argument, va_list ap)
 {
 	u_int64_t			n;
 
@@ -79,14 +79,14 @@ u_int8_t			unsigned_handler(PF *argument, va_list ap)
 	return (unsigned_helper(argument));
 }
 
-u_int8_t			prc_handler(PF *argument, va_list ap)
+u_int64_t			prc_handler(PF *argument, va_list ap)
 {
 	argument->arg = "%";
 	ft_print_character(argument);
-	return ((u_int8_t)ap);
+	return ((u_int64_t)ap);
 }
 
-u_int8_t			pointer_handler(PF *argument, va_list ap)
+u_int64_t			pointer_handler(PF *argument, va_list ap)
 {
 	u_int64_t			n;
 

@@ -68,7 +68,7 @@ struct					s_printf
 
 struct					s_spec
 {
-	u_int8_t			(*spe[128])(PF*, va_list);
+	u_int64_t			(*spe[128])(PF*, va_list);
 };
 
 int						ft_printf(const char *format, ...);
@@ -82,8 +82,8 @@ void					ft_display(PF *argument);
 void					*ft_buff(char *str, PF *argument);
 void					ft_buf(char c, PF *argument);
 ssize_t					ft_print_character(PF *argument);
-u_int8_t				ft_print_str(PF *argument);
-u_int8_t				ft_print_number(PF *argument, char *pre);
+u_int64_t				ft_print_str(PF *argument);
+u_int64_t				ft_print_number(PF *argument, char *pre);
 
 /*
 ** MEMORY
@@ -99,7 +99,7 @@ void					ft_init_spe_tab(SPE *spe);
 
 size_t					ft_wcharlen(wchar_t wchar);
 size_t					ft_wbytelen(wchar_t *ws);
-u_int8_t				ft_wchartostr(char *s, wchar_t wc);
+u_int64_t				ft_wchartostr(char *s, wchar_t wc);
 void					ft_nputchar(char c, ssize_t n, PF *argument);
 size_t					ft_wstrlen(wchar_t *s);
 char					*ft_wstrsub
@@ -112,14 +112,14 @@ size_t					ft_putwchar_in_char
 ** HANDLER
 */
 
-u_int8_t				signed_handler(PF *argument, va_list ap);
-u_int8_t				pointer_handler(PF *argument, va_list ap);
-u_int8_t				character_handler(PF *argument, va_list ap);
-u_int8_t				string_handler(PF *argument, va_list ap);
-u_int8_t				unsigned_handler(PF *argument, va_list ap);
-u_int8_t				ft_arg_nospe(PF *argument, va_list ap);
-u_int8_t				prc_handler(PF *argument, va_list ap);
-u_int8_t				float_handler(PF *argument, va_list ap);
+u_int64_t				signed_handler(PF *argument, va_list ap);
+u_int64_t				pointer_handler(PF *argument, va_list ap);
+u_int64_t				character_handler(PF *argument, va_list ap);
+u_int64_t				string_handler(PF *argument, va_list ap);
+u_int64_t				unsigned_handler(PF *argument, va_list ap);
+u_int64_t				ft_arg_nospe(PF *argument, va_list ap);
+u_int64_t				prc_handler(PF *argument, va_list ap);
+u_int64_t				float_handler(PF *argument, va_list ap);
 
 /*
 ** FLAGS

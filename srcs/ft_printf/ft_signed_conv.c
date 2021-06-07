@@ -36,7 +36,7 @@ static int64_t	signed_cast(PF *argument, va_list ap)
 
 static void		test_string(PF *args)
 {
-	u_int8_t	octal;
+	u_int64_t	octal;
 
 	if (!args->arg)
 		return ;
@@ -53,7 +53,7 @@ static void		test_string(PF *args)
 	}
 }
 
-u_int8_t		signed_handler(PF *argument, va_list ap)
+u_int64_t		signed_handler(PF *argument, va_list ap)
 {
 	int64_t	n;
 
@@ -73,7 +73,7 @@ u_int8_t		signed_handler(PF *argument, va_list ap)
 	return (ft_print_number(argument, ""));
 }
 
-static u_int8_t	ft_print_number_bis(PF *argument, ssize_t padding)
+static u_int64_t	ft_print_number_bis(PF *argument, ssize_t padding)
 {
 	ft_buff(argument->arg, argument);
 	if (argument->flags[4] == 1)
@@ -82,7 +82,7 @@ static u_int8_t	ft_print_number_bis(PF *argument, ssize_t padding)
 	return (0);
 }
 
-u_int8_t		ft_print_number(PF *argument, char *pre)
+u_int64_t		ft_print_number(PF *argument, char *pre)
 {
 	ssize_t	len;
 	ssize_t	precision;

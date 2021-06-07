@@ -155,7 +155,7 @@ vpath %.h $(H_PATH)
 # Variables
 
 DEBUG			=
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werror -Wpointer-to-int-cast
 ifeq ($(DEBUG), g)
 	CFLAGS		=	-g
 else ifeq ($(DEBUG), fsanitize)

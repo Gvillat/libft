@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static u_int8_t	ft_wchartostr_bis(char *s, wchar_t wc)
+static u_int64_t	ft_wchartostr_bis(char *s, wchar_t wc)
 {
 	if (wc < 0x800)
 	{
@@ -38,7 +38,7 @@ static u_int8_t	ft_wchartostr_bis(char *s, wchar_t wc)
 	return (0);
 }
 
-u_int8_t		ft_wchartostr(char *s, wchar_t wc)
+u_int64_t		ft_wchartostr(char *s, wchar_t wc)
 {
 	if (wc < 0x80)
 	{

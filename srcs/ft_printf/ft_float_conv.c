@@ -105,7 +105,7 @@ static char			*ft_ftoa(long double nbr, PF *argument, size_t precision)
 	return (argument->arg);
 }
 
-u_int8_t			float_handler(PF *argument, va_list ap)
+u_int64_t			float_handler(PF *argument, va_list ap)
 {
 	long double	n;
 	size_t		precision;
