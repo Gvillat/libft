@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strjoinf(char *s1, char *s2, u_int8_t vars)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_itoa_base_custom(u_int64_t nbr, int32_t base)

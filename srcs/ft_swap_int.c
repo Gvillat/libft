@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 
 void	ft_swap_int(int32_t *nb1, int32_t *nb2)
 {

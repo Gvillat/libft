@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 
 static t_lst	*merge_lists(t_lst *a, t_lst *b, int (*cmp)(void *, void *))
 {

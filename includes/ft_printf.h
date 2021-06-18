@@ -33,7 +33,7 @@
 # define LCYA		"\033[01;36m"
 # define RST		"\033[01;37m"
 
-# include "shared_libft.h"
+# include "libft.h"
 # include <wchar.h>
 
 extern char				g_buff[BUFF_MAX];

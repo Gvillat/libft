@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 t_lst	*ft_lstnew(const void *content, size_t content_size)

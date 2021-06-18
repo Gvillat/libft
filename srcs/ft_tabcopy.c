@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 char	**ft_tabcopy(char **tab_dest, char **tab_copy)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 
 int32_t	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

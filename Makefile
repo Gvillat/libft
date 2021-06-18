@@ -2,7 +2,7 @@ define MSG
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile for shared_libft                          :+:      :+:    :+:    #
+#    Makefile for libft                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: guvillat <guvillat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -41,7 +41,7 @@ C_C				=	\033[0;36
 
 # Programms names
 
-NAME			=	shared_libft.a
+NAME			=	libft.a
 
 # Dir/Files Path
 
@@ -146,7 +146,7 @@ SRC				+=	$(S_PATH)$(PRINTF)ft_unsigned_conv.c
 
 # Objects and Headers
 
-HDR				+=	shared_libft.h
+HDR				+=	libft.h
 HDR				+=	ft_printf.h
 
 OBJ				=	$(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))

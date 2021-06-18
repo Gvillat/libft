@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shared_libft.h"
+#include "libft.h"
 
 int8_t	ft_itoabuf(int32_t number, char *buffer)
 {
